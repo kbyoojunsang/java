@@ -7,8 +7,11 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import java.awt.Color;
+import java.awt.Font;
 
 public class Pizza {
 
@@ -22,12 +25,14 @@ public class Pizza {
 	int bulgoki = 0;
 
 	JTextArea list;
+	private JLabel label;
+	private JButton btnNewButton;
 
 	public Pizza() {
 		// 1. 부품 복사(객체 생성)
 		f = new JFrame();
 		top = new JLabel("<<<<<자바 피자에 오신 것을 환영합니다. 반갑습니다.>>>>>");
-		f.setSize(400, 200);
+		f.setSize(372, 289);
 		count = new JLabel("개수");
 		b1 = new JButton("콤보피자");
 		b2 = new JButton("포테이토피자");
@@ -35,15 +40,31 @@ public class Pizza {
 		total = new JTextField(20); // 20글자까지 사용
 
 		FlowLayout flow = new FlowLayout();
-		f.setLayout(flow);
+		f.getContentPane().setLayout(flow);
 		list = new JTextArea(3, 30); // ( 가로행 , 세로열)
 
-		f.add(top);
-		f.add(b1);
-		f.add(b2);
-		f.add(b3);
-		f.add(total);
-		f.add(list);
+		f.getContentPane().add(top);
+		f.getContentPane().add(b1);
+		f.getContentPane().add(b2);
+		f.getContentPane().add(b3);
+		f.getContentPane().add(total);
+		
+		label = new JLabel("총계");
+		label.setFont(new Font("궁서체", Font.PLAIN, 50));
+		label.setForeground(Color.MAGENTA);
+		f.getContentPane().add(label);
+		f.getContentPane().add(list);
+		
+		btnNewButton = new JButton("나를 누르세요");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				JOptionPane.showMessageDialog(null, "나를 정말 누르셨군요");
+			}
+		});
+		btnNewButton.setBackground(Color.CYAN);
+		btnNewButton.setForeground(Color.RED);
+		btnNewButton.setFont(new Font("휴먼모음T", Font.PLAIN, 50));
+		f.getContentPane().add(btnNewButton);
 
 		b1.addActionListener(new ActionListener() {
 
