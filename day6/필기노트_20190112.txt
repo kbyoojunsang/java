@@ -1,0 +1,41 @@
+< 2019. 1. 12 노트필기 >
+
+■ BMW 타려면
+    1. 내가 직접 만든다. ☞  class
+    2. 가서 산다. ( 원형 -> 복사 , download )  ☞  new
+    3. 상속  ☞  재사용
+        └ ★오늘 할 내용임.★  예시) 일기장 만들기.
+       ㅇ 집 (기존 초록색 지붕) → 갈색 지붕으로 변경(재정의)
+			    overwrite
+			    override (오버라이딩)		
+
+class 이름은 항상 대문자로 만들어라!!!
+
+실행 : ctrl + F11
+
+ㅇ java class 는 대문자로 생성
+ㅇ package 는 소문자로 생성
+
+<기업용 기본적으로 3개 이상>
+ㅇ 홈페이지 : finace.kb.com
+ㅇ 만들때는 거꾸로 com.yewon.www
+
+ open with -> window
+
+\\gmaster\bigdata
+
+https://developer.android.com/studio/
+
+<UTF-8 세팅>
+ㅇ MENU - preference - general - workspace- text file enconding - other - UTF-8
+
+   
+
+
+
+
+
+
+
+
+
